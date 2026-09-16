@@ -20,14 +20,14 @@ vectorworks-tools/
 Самая простая статика: `website/index.html` + `website/styles.css`.
 Тяжёлого фреймворка нет.
 
-Открыть локально:
+Открыть локально (из корня проекта, любой свободный порт):
 
 ```bash
-cd /home/goxa/project/project_hab/vectorworks-tools
-python3 -m http.server 8765
+cd vectorworks-tools
+python3 -m http.server 8876
 ```
 
-Затем в браузере: `http://127.0.0.1:8765/website/`
+Затем в браузере: `http://127.0.0.1:8876/website/`
 
 Скачивание идёт из `dist/` (ссылка `../dist/...` работает и с `file://`, и с сервером из корня проекта).
 Не поднимайте сервер из папки `website/` — тогда файл в `dist/` будет недоступен.
@@ -69,11 +69,7 @@ chmod +x build-mingw.sh
 
 ## GitHub
 
-После создания репозитория:
+Публичный репозиторий: [github.com/pridurok-goxa/vectorworks-tools](https://github.com/pridurok-goxa/vectorworks-tools).
+`origin` уже настроен. Обычная публикация правок: `git push origin main`.
 
-```bash
-git remote add origin https://github.com/pridurok-goxa/vectorworks-tools.git
-git push -u origin main
-```
-
-Если URL другой — поправьте ссылки в `README.md` и в карточке на `website/index.html`.
+Публичный домен, GitHub Pages и HTTPS не включены — для этого нужны DNS и явное согласие.
