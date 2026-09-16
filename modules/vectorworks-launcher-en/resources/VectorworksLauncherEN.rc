@@ -1,0 +1,4 @@
+// Ресурсы VectorworksLauncherEN: иконка приложения
+#include <windows.h>
+
+IDI_APPICON ICON "assets/Vectorworks.ico"

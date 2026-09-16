@@ -1,0 +1,197 @@
+/* Каталог Vectorworks Tools: простая читаемая страница без фреймворка */
+
+:root {
+  --bg: #f3efe6;
+  --ink: #1b2430;
+  --muted: #5b6573;
+  --card: #fffdf8;
+  --line: #d9d2c4;
+  --accent: #0d6e68;
+  --accent-ink: #ffffff;
+  --soon: #ece7dc;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, #e4efe8 0, transparent 42%),
+    var(--bg);
+  line-height: 1.5;
+}
+
+.hero,
+main,
+footer {
+  width: min(760px, calc(100% - 32px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  padding: 48px 0 16px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+}
+
+.lead,
+.section-note,
+.meta,
+footer {
+  color: var(--muted);
+}
+
+.lead {
+  margin: 12px 0 0;
+  font-size: 1.05rem;
+}
+
+.catalog {
+  padding: 16px 0 8px;
+}
+
+.catalog h2 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.section-note {
+  margin: 0 0 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(27, 36, 48, 0.04);
+}
+
+.card + .card {
+  margin-top: 12px;
+}
+
+.card-soon {
+  background: var(--soon);
+  box-shadow: none;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin: 0 0 12px;
+}
+
+.meta {
+  font-size: 0.92rem;
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #d9efe8;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.badge-muted {
+  background: #ddd7cb;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button,
+.button-ghost,
+.button-disabled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.button {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.button-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.button-disabled {
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+footer {
+  padding: 32px 0 48px;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: var(--accent);
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding-top: 32px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .button,
+  .button-ghost {
+    width: 100%;
+  }
+}
